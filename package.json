@@ -8,42 +8,56 @@
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
 		"build": "npm run lint && npm run compile",
-		"up": "echo 'ok'"
+		"up": "git pull git@gitee.com:mmstudio/base.git master"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://gitee.com/mmstudio/base"
-	},
-	"main": "dist/index.js",
-	"keywords": [
-		"mm",
-		"mmstudio",
-		"蛮蛮",
-		"蛮蛮工作室",
-		"插件式",
-		"原子操作",
-		"控件",
-		"框架"
-	],
-	"author": {
-		"name": "$user",
-		"email": "$email@xxx.com"
-	},
-	"maintainers": [
-		{
-			"name": "taoqf",
-			"email": "tao_qiufeng@126.com"
-		}
-	],
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"@mmstudio/an000001": "1.0.202003081220",
+		"@mmstudio/an000002": "1.0.202003081221",
+		"@mmstudio/an000003": "1.0.202003081222",
+		"@mmstudio/an000004": "1.0.202003081223",
+		"@mmstudio/an000005": "1.0.202003081343",
+		"@mmstudio/an000006": "1.0.202003081452",
+		"@mmstudio/aw000001": "1.0.202003081224",
+		"@mmstudio/aw000002": "1.0.202003081225",
+		"@mmstudio/aw000004": "1.0.202003081227",
+		"@mmstudio/config": "1.0.202003050911",
+		"@mmstudio/invoke": "1.0.202003050941",
+		"@mmstudio/server": "1.0.202003051337",
+		"@mmstudio/web": "1.0.202003081141",
+		"minio": "7.0.14",
+		"node-html-parser": "1.2.9",
+		"puppeteer": "2.1.1"
+	},
 	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/plugin-proposal-object-rest-spread": "latest",
+		"@babel/plugin-transform-runtime": "latest",
+		"@babel/preset-env": "latest",
+		"@babel/runtime": "latest",
+		"@dojo/loader": "latest",
+		"@mmstudio/on": "1.0.202003041352",
+		"@types/uuid": "latest",
+		"@types/xml2js": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"@webcomponents/webcomponentsjs": "latest",
+		"babel-loader": "latest",
+		"browser-sync": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
-		"typescript": "next"
+		"glob": "latest",
+		"gulp": "latest",
+		"gulp-minify-html": "latest",
+		"gulp-rename": "latest",
+		"gulp-shell": "latest",
+		"gulp-uglify-es": "latest",
+		"log4js": "6.1.2",
+		"through2": "latest",
+		"typescript": "latest",
+		"webpack": "latest",
+		"webpack-stream": "latest"
 	}
 }
