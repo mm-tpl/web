@@ -1,14 +1,14 @@
 {
-	"name": "@mmstudio/base",
+	"name": "@mmstudio/prj000001",
 	"version": "1.0.0",
-	"description": "$desc",
+	"description": "",
 	"scripts": {
 		"test": "tsc -w",
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
 		"build": "npm run lint && npm run compile",
-		"up": "git pull git@gitee.com:mmstudio/base.git master"
+		"up": "git pull git@gitee.com:mmstudio/base.git prj-tpl"
 	},
 	"license": "MIT",
 	"dependencies": {
@@ -16,7 +16,7 @@
 		"@mmstudio/an000002": "1.0.202003081221",
 		"@mmstudio/an000003": "1.0.202003081222",
 		"@mmstudio/an000004": "1.0.202003081223",
-		"@mmstudio/an000005": "1.0.202003081343",
+		"@mmstudio/an000005": "1.0.202003081610",
 		"@mmstudio/an000006": "1.0.202003081452",
 		"@mmstudio/aw000001": "1.0.202003081224",
 		"@mmstudio/aw000002": "1.0.202003081225",
