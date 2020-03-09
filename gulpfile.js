@@ -33,7 +33,7 @@ gulp.task('test:build-html', (cb) => {
 					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 					<meta name="renderer" content="webkit">
 					<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
-					<link rel="stylesheet" type="text/css" href="../css/daoke.css">
+					<link rel="stylesheet" type="text/css" href="../css/mm.css">
 					<script src="https://cdn.jsdelivr.net/npm/katex"></script>
 					<script src="../../node_modules/@dojo/loader/loader.js"></script>
 					<script type="text/javascript">
@@ -63,16 +63,15 @@ gulp.task('test:build-html', (cb) => {
 					(function(){
 						window.host = \`http://\${window.location.hostname}:8889\`;
 						window.mqtt_uri = '';
-						require(['daoke/${page_no}/n'],function(main){
+						require(['../../dist/${page_no}/n'],function(main){
 							var url = window.location.href;
 							main.default(url, {cookie:{}}, {
 								actionid: uuid()
-							}).then(function(res){
+							}).then(function(data){
 								// 去掉n返回页面的头部内容，只留body内容
-								const data = res.data;
 								const content = data.match(/<body[\\s|\\S]+>([\\s|\\S]+)<\\/body>/);
 								document.body.innerHTML = content[0];
-								require(['daoke/${page_no}/b']);
+								require(['../../dist/${page_no}/b']);
 							});
 						});
 					})();

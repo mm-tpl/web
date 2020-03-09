@@ -11,26 +11,6 @@
 	"acma": 150000,
 	"favicon": "./favicon.ico",
 	"max_file_size": 53687091200,
-	"filters": [
-		{
-			"url": "/yyy",
-			"method": "get",
-			"service": "s001",
-			"data": {
-				"modelid": "s001"
-			}
-		}
-	],
-	"routers": [
-		{
-			"url": "/xxx",
-			"method": "post",
-			"service": "s001",
-			"data": {
-				"modelid": "s001"
-			}
-		}
-	],
 	"minio": {
 		"endPoint": "127.0.0.1",
 		"port": 9000,
