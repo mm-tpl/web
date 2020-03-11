@@ -7,9 +7,8 @@
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
-		"build": "npm run clean && npm run lint && gulp build:tpl && npm run compile && gulp",
-		"build:n": "gulp build:n.ts",
-		"test:ts": "tsc -w -m umd",
+		"build": "npm run clean && npm run lint && gulp build:tpl && npm run build:n && npm run compile && gulp",
+		"addtm": "gulp build:n.ts && git commit -am 'add timestemp'",
 		"up": "git pull git@gitee.com:mmstudio/base.git prj-tpl"
 	},
 	"license": "MIT",

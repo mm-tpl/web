@@ -136,7 +136,7 @@ function lazy(file, tpl, time) {
 	}
 }
 
-gulp.task('test:ts', shell.task(`npm run test:ts`));
+gulp.task('test:ts', shell.task(`tsc -w -m umd`));
 
 gulp.task('test:server', shell.task(`mm-server`));
 
