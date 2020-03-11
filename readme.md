@@ -17,6 +17,7 @@
 	- [3.1. 创建方法](#31-创建方法)
 	- [3.2. 通用型控件](#32-通用型控件)
 	- [3.3. 项目级控件](#33-项目级控件)
+	- [3.4 控件方法的调用](#34-控件方法的调用)
 
 <!-- /TOC -->
 
@@ -166,3 +167,24 @@
 ### 3.3. 项目级控件
 
 可以在项目中实现某个通用控件,控件用到一些封装方法和web组件及shadowdom的技术，不过其基础代码已添加，开发人员按照示例的方法添加自己的实现代码就好。并需其插入代码模板写入`use.snippet`。也可以将项目中固定搭配的控件合并为一个，在项目中快速引用。
+
+注意：
+
+引用控件时请先选定要插入控件的位置，这样插入的代码模板才不会乱。
+
+### 3.4 控件方法的调用
+
+因为typescript类型的关系，如果要使用控件`mm-000001`，需在客户端响应中手动引入控件类型
+
+```ts
+import Widget1 from '@mmstudio/ww000001';
+// 引入项目内控件
+import Widget2 from '../../widgets/pw001';
+
+const w1 = document.querySelector<Widget1>('#widgetid1')!;
+w1.method01('foo', 'bar');
+
+const w2 = document.querySelector<Widget2>('#widgetid2')!;
+w2.method01('foo', 'bar');
+
+```
