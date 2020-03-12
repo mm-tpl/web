@@ -17,7 +17,18 @@
 	- [3.1. 创建方法](#31-创建方法)
 	- [3.2. 通用型控件](#32-通用型控件)
 	- [3.3. 项目级控件](#33-项目级控件)
-	- [3.4 控件方法的调用](#34-控件方法的调用)
+	- [3.4. 控件方法的调用](#34-控件方法的调用)
+- [4. 文件转换](#4-文件转换)
+	- [4.1. 转pdf](#41-转pdf)
+	- [4.2. 转word文档](#42-转word文档)
+	- [4.3. 转xlsx表格](#43-转xlsx表格)
+- [5. 文件服务](#5-文件服务)
+	- [5.1. 配置](#51-配置)
+	- [5.2. 上传](#52-上传)
+	- [5.3. 下载](#53-下载)
+	- [5.4. 上传office文档，转换为ppt和图片](#54-上传office文档转换为ppt和图片)
+	- [5.5. 重新上传](#55-重新上传)
+	- [5.6. 删除](#56-删除)
 
 <!-- /TOC -->
 
@@ -172,7 +183,7 @@
 
 引用控件时请先选定要插入控件的位置，这样插入的代码模板才不会乱。
 
-### 3.4 控件方法的调用
+### 3.4. 控件方法的调用
 
 因为typescript类型的关系，如果要使用控件`mm-000001`，需在客户端响应中手动引入控件类型
 
@@ -186,5 +197,93 @@ w1.method01('foo', 'bar');
 
 const w2 = document.querySelector<Widget2>('#widgetid2')!;
 w2.method01('foo', 'bar');
-
 ```
+
+## 4. 文件转换
+
+### 4.1. 转pdf
+
+使用服务端渲染的方法制作页面即可，然后将页面后缀(html)修改为pdf即可查看效果（如果是开发阶段，需要修改页面的端口为8889）
+
+### 4.2. 转word文档
+
+使用服务端渲染的方法制作页面，然后，然后将页面后缀(html)修改为xlsx即可查看效果（如果是开发阶段，需要修改页面的端口为8889）
+
+### 4.3. 转xlsx表格
+
+使用服务端渲染的方法制作页面，注意必须将页面使用`table`渲染，然后，然后将页面后缀(html)修改为xlsx即可查看效果（如果是开发阶段，需要修改页面的端口为8889），这是一种相对简单的做法，无法满足复杂表格（如带有公式等高级功能的表格）
+
+## 5. 文件服务
+
+通常使用控件和原子操作来完成。以下为简单介绍。
+
+### 5.1. 配置
+
+需要配置一个文件数据库
+
+mm.json
+
+```json
+{
+	"minio": {
+		"endPoint": "127.0.0.1",
+		"port": 9000,
+		"accessKey": "mmstudio",
+		"secretKey": "Mmstudio111111",
+		"useSSL": false,
+		"region": "cn-north-1",
+		"partSize": 5242880
+	}
+}
+```
+
+同时需要启动一个文件数据库minio
+
+[docker-compose安置](https://download.daocloud.io/Docker_Mirror/Docker_Compose)
+
+```sh
+[sudo] docker-compose -f db.yaml up
+```
+
+```yaml
+version: '3.7'
+
+services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server /data
+    volumes:
+      - /home/taoqf/data/minio:/data
+    ports:
+      - 9000:9000
+    environment:
+      MINIO_ACCESS_KEY: mmstudio
+      MINIO_SECRET_KEY: Mmstudio123
+```
+
+### 5.2. 上传
+
+当前项目页面地址/fsweb/upload，支持一次上传多个文件
+
+### 5.3. 下载
+
+当前项目页面地址/fsweb/getfile?id=xxx，如果是图片，不添加`download`参数直接展示在页面展示，如果要下载，请添加 `download` 参数，`download`参数支持以下几种形态.
+
+1. /fsweb/getfile?id=xxx&downlaod
+1. /fsweb/getfile?id=xxx&downlaod=false
+1. /fsweb/getfile?id=xxx&downlaod=abc.jpe
+
+如果一次性下载多个文件，请使用 `/fsweb/getfile?id=xxx,yyy,zzz`
+
+### 5.4. 上传office文档，转换为ppt和图片
+
+当前项目页面地址/fsweb/upload-office，支持选择性转换为图片。
+
+### 5.5. 重新上传
+
+当前项目页面地址/fsweb/reupload?id=xxx
+
+### 5.6. 删除
+
+当前项目页面地址/fsweb/delfile?id=xxx
