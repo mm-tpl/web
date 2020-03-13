@@ -12,7 +12,7 @@ gulp.task('test:build-html', (cb) => {
 	packages.forEach((p) => {
 		keys.add(p.name);
 	});
-	glob('./node_modules/**/amd.json', (err, files) => {
+	glob('./**/amd.json', (err, files) => {
 		files.forEach((file) => {
 			const pkgs = require(file);
 			pkgs.forEach((p) => {
