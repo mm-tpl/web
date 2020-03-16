@@ -1,7 +1,7 @@
 {
-	"name": "@mmstudio/prj000001",
+	"name": "@mmstudio/$prj",
 	"version": "1.0.0",
-	"description": "",
+	"description": "$desc",
 	"scripts": {
 		"test": "gulp test",
 		"clean": "del-cli ./dist/",
