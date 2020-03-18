@@ -117,7 +117,7 @@
 1. 将其设置为初始化事件，在s.ts中添加初始化事件:
 
 	```ts
-	'fd-events-init': 'a001'
+	'mm-events-init': 'a001'
 	```
 
 1. 将tpl中的部分内容生成渲染块，具体操作为：选中`<div><h1>mm</h1></h2>studio</h2></div>`，按下快捷键(alt+x)即可自动生成p01.tpl。注意渲染原子操作使用的是一个非常优秀的[dot模板引擎](http://olado.github.com/doT)
@@ -472,7 +472,9 @@ services:
 
 ### 12.2. 定时任务
 
-详见[定时任务服务](https://www.npmjs.com/package/@mmstudio/schedule)
+使用vscode扩展添加定时任务配置。
+
+服务详情见[定时任务服务](https://www.npmjs.com/package/@mmstudio/schedule)
 
 ## 13. 第三方库的引用
 
