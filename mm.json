@@ -27,11 +27,11 @@
 	"dbs": {
 		"sys": {
 			"type": "postgres",
-			"source": "postgres://mmstudio:Mmstudio111111@127.0.0.1:5432/feidao"
+			"source": "postgres://mmstudio:Mmstudio123@127.0.0.1:5432/mmstudio"
 		},
 		"prj001": {
 			"type": "mariadb",
-			"source": "mysql://mmstudio:Mmstudio111111@127.0.0.1:3306/feidao?connectionLimit=5"
+			"source": "mysql://mmstudio:Mmstudio123@127.0.0.1:3306/mmstudio?connectionLimit=5"
 		}
 	}
 }
