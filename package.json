@@ -12,6 +12,7 @@
 		"addtm": "gulp build:n.ts && git commit -am 'add timestemp'",
 		"up": "git pull git@github.com:mm-core/base.git prj-tpl"
 	},
+	"homepage": "https://mm-works.github.io",
 	"license": "MIT",
 	"dependencies": {
 		"@mmstudio/an000001": "1.0.202003171125",
