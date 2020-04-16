@@ -10,7 +10,7 @@
 		"compile": "tsc",
 		"build": "npm run clean && npm run lint && gulp build:tpl && npm run build:n && npm run compile && gulp",
 		"addtm": "gulp build:n.ts && git commit -am 'add timestemp'",
-		"up": "git pull git@gitee.com:mmstudio/base.git prj-tpl"
+		"up": "git pull git@github.com:mm-core/base.git prj-tpl"
 	},
 	"license": "MIT",
 	"dependencies": {
