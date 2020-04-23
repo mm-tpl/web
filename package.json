@@ -47,7 +47,7 @@
 		"@mmstudio/aw000004": "1.0.202004171548",
 		"@mmstudio/aw000005": "1.0.202004161742",
 		"@mmstudio/schedule": "1.0.202004171021",
-		"@mmstudio/web": "1.0.202004231735",
+		"@mmstudio/web": "1.0.202004231805",
 		"@types/minio": "latest",
 		"@types/uuid": "latest",
 		"@types/xml2js": "latest",
