@@ -25,13 +25,14 @@
 		"@mmstudio/an000007": "1.0.202004170753",
 		"@mmstudio/config": "1.0.202004161715",
 		"@mmstudio/global": "1.0.202004161717",
+		"@mmstudio/nodejs": "1.0.202004231734",
 		"@mmstudio/on": "1.0.202004161718",
 		"@mmstudio/schedule": "1.0.202004171021",
 		"@mmstudio/server": "1.0.202004171023",
+		"log4js": "6.2.1",
 		"minio": "7.0.15",
 		"node-html-parser": "1.2.16",
-		"puppeteer": "3.0.1",
-		"log4js": "6.2.1"
+		"puppeteer": "3.0.1"
 	},
 	"devDependencies": {
 		"@babel/core": "latest",
@@ -40,9 +41,9 @@
 		"@babel/preset-env": "latest",
 		"@babel/runtime": "latest",
 		"@dojo/loader": "latest",
-		"@mmstudio/aw000003": "1.0.202004161740",
 		"@mmstudio/aw000001": "1.0.202004161735",
 		"@mmstudio/aw000002": "1.0.202004161738",
+		"@mmstudio/aw000003": "1.0.202004161740",
 		"@mmstudio/aw000004": "1.0.202004171548",
 		"@mmstudio/aw000005": "1.0.202004161742",
 		"@mmstudio/schedule": "1.0.202004171021",
