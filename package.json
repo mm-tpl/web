@@ -21,7 +21,7 @@
 		"@mmstudio/an000003": "1.0.202004170749",
 		"@mmstudio/an000004": "1.0.202004170750",
 		"@mmstudio/an000005": "1.0.202004170808",
-		"@mmstudio/an000006": "1.0.202004170752",
+		"@mmstudio/an000006": "1.0.202005300909",
 		"@mmstudio/an000007": "1.0.202004170753",
 		"@mmstudio/config": "1.0.202004161715",
 		"@mmstudio/global": "1.0.202004161717",
@@ -29,10 +29,10 @@
 		"@mmstudio/on": "1.0.202004161718",
 		"@mmstudio/schedule": "1.0.202004171021",
 		"@mmstudio/server": "1.0.202004171023",
-		"log4js": "6.2.1",
-		"minio": "7.0.15",
-		"node-html-parser": "1.2.16",
-		"puppeteer": "3.0.1"
+		"log4js": "6.3.0",
+		"minio": "7.0.16",
+		"node-html-parser": "1.2.18",
+		"puppeteer": "3.2.0"
 	},
 	"devDependencies": {
 		"@babel/core": "latest",
