@@ -28,11 +28,10 @@
 		"@mmstudio/nodejs": "1.0.202004231734",
 		"@mmstudio/on": "1.0.202004161718",
 		"@mmstudio/schedule": "1.0.202004171021",
-		"@mmstudio/server": "1.0.202004171023",
+		"@mmstudio/server": "1.0.202005312012",
 		"log4js": "6.3.0",
 		"minio": "7.0.16",
-		"node-html-parser": "1.2.18",
-		"puppeteer": "3.2.0"
+		"node-html-parser": "1.2.18"
 	},
 	"devDependencies": {
 		"@babel/core": "latest",
